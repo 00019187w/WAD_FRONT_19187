@@ -1,0 +1,46 @@
+<div class="wrapper">
+  <form [formGroup]="ingredientsForm" (ngSubmit)="onSubmit()" class="add-form">
+    <h1 class="title">New Ingredients</h1>
+    <div class="form-control">
+      <label for="text">Name of Ingredient</label>
+      <input
+        type="text"
+        name="text"
+        id="text"
+        placeholder="Add ingredient's name"
+        formControlName="name"
+      />
+    </div>
+    <div class="form-control">
+      <label for="quantity">Quantity</label>
+      <input
+        type="number"
+        id="quantity"
+        placeholder="Add quantity"
+        formControlName="quantity"
+      />
+    </div>
+    <div class="form-control form-control-check">
+      <label for="recipes">Select Recipe</label>
+      <select
+        name="recipes"
+        id="recipes"
+        formControlName="recipeId"
+        class="selector"
+      >
+        <option value="">Select Recipe</option>
+        @for (item of recipes; track item.id) {
+        <option [value]="item.id">{{ item.name }}</option>
+        }
+      </select>
+    </div>
+    <button
+      type="submit"
+      [disabled]="ingredientsForm.invalid || ingredientsForm.pristine"
+      [class.disabled]="ingredientsForm.invalid || ingredientsForm.pristine"
+      class="btn btn-block"
+    >
+      {{ ingredientsId ? "Update" : "Submit" }}
+    </button>
+  </form>
+</div>

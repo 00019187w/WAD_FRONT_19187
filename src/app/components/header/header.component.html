@@ -1,0 +1,25 @@
+<header>
+  <div class="logo">
+    <a href="">Recipe App</a>
+  </div>
+  <div class="pages">
+    <button mat-raised-button (click)="btnClick('ingredients')">
+      Ingredients
+    </button>
+
+    <button mat-raised-button (click)="btnClick('recipes')">Recipes</button>
+  </div>
+  <a
+    [style.display]="
+      router.url !== '/ingredients' && router.url !== '/recipes'
+        ? 'none'
+        : 'block'
+    "
+    class="btn"
+    [href]="
+      router.url === '/ingredients' ? '/create-ingredients' : '/create-recipes'
+    "
+  >
+    Create</a
+  >
+</header>

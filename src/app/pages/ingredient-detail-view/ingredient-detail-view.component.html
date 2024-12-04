@@ -1,0 +1,35 @@
+<div class="wrapper">
+  <h1 class="numberOfIngredient">
+    About Number {{ ingredientsDetail.id }} Ingredient
+  </h1>
+  <div class="items">
+    <div class="itemWrapper">
+      <h1 class="Title">Name</h1>
+      <h2 class="name">{{ ingredientsDetail.name }}</h2>
+    </div>
+    <div class="itemWrapper">
+      <h1 class="Title">Quantity</h1>
+      <h2 class="name">{{ ingredientsDetail.quantity }}</h2>
+    </div>
+  </div>
+
+  <h1 class="numberOfIngredient">Number {{ ingredientsDetail.recipe.id }} Recipe</h1>
+  <div class="items">
+    <div class="itemWrapper">
+      <h1 class="Title">Recipe Name</h1>
+      <h2 class="name">{{ ingredientsDetail.recipe.name }}</h2>
+    </div>
+    <div class="itemWrapper">
+      <h1 class="Title">Description</h1>
+      <h2 class="name">{{ ingredientsDetail.recipe.description }}</h2>
+    </div>
+    <div class="itemWrapper">
+      <h1 class="Title">Preparation Time</h1>
+      <h2 class="name">{{ ingredientsDetail.recipe.preparationTime }}</h2>
+    </div>
+    <div class="itemWrapper">
+      <h1 class="Title">Servings</h1>
+      <h2 class="name">{{ ingredientsDetail.recipe.servings }}</h2>
+    </div>
+  </div>
+</div>
