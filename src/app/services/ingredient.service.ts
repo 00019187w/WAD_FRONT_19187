@@ -7,7 +7,7 @@ import { CreateIngredient, IngredientsType } from '../Interfaces/Ingredients';
   providedIn: 'root',
 })
 export class IngredientsService {
-  private apiurl = 'http://localhost:5091/api';
+  private apiurl = 'https://localhost:7225/api';
   constructor(private http: HttpClient) {}
   getItems(): Observable<IngredientsType[]> {
     return this.http.get<IngredientsType[]>(this.apiurl + '/Ingredients');
