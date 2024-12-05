@@ -7,7 +7,7 @@ import { CreateRecipes, RecipesType } from '../Interfaces/RecipeType';
   providedIn: 'root',
 })
 export class RecipesService {
-  private apiurl = 'http://localhost:5091/api';
+  private apiurl = 'https://localhost:7225/api';
   constructor(private http: HttpClient) {}
 
   getItems(): Observable<RecipesType[]> {
